@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::any('/', ['as' => 'home', 'uses' => 'Index\\IndexController@index']);
